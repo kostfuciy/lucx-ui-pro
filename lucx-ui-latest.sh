@@ -74,7 +74,7 @@ Pak="apt-get"
 
 # ─── Constants ───────────────────────────────────────────────────────────────
 XUIDB="/etc/x-ui/x-ui.db"
-GITHUB_RAW="https://raw.githubusercontent.com/kostfuciy/lucx-ui-pro/main"
+GITHUB_RAW="https://raw.githubusercontent.com/kostfuciy/lucx-ui-pro/refs/heads/main"
 COVER_GENERATOR_SHA256="76d4b7b1b9858b626888200b7d546518a5399245e073a153a217b0fec6f674b0"
 COVER_GENERATOR_DIR="/usr/local/lib/lucx-ui-pro/cover-generator"
 PREINSTALL_STATE_DIR="/var/lib/lucx-ui-preinstall"
