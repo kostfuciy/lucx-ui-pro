@@ -74,7 +74,7 @@ Pak="apt-get"
 
 # ─── Constants ───────────────────────────────────────────────────────────────
 XUIDB="/etc/x-ui/x-ui.db"
-GITHUB_RAW="https://raw.githubusercontent.com/ttrroyy/lucx-ui-pro/main"
+GITHUB_RAW="https://raw.githubusercontent.com/kostfuciy/lucx-ui-pro/main"
 COVER_GENERATOR_SHA256="76d4b7b1b9858b626888200b7d546518a5399245e073a153a217b0fec6f674b0"
 COVER_GENERATOR_DIR="/usr/local/lib/lucx-ui-pro/cover-generator"
 PREINSTALL_STATE_DIR="/var/lib/lucx-ui-preinstall"
@@ -861,7 +861,7 @@ PY_UPDATE_ONE_DOMAIN
         [[ "$(release_tag "$stage/target.json")" == "$target" ]] || return 1
     fi
     curl -fSL --retry 3 --connect-timeout 15 --max-time 90 \
-        https://api.github.com/repos/ttrroyy/lucx-ui-pro/commits/main -o "$stage/pro.json" || return 1
+        https://api.github.com/repos/kostfuciy/lucx-ui-pro/commits/main -o "$stage/pro.json" || return 1
     script_commit=$(python3 - "$stage/pro.json" <<'PY_PRO_COMMIT'
 import json, re, sys
 sha = json.load(open(sys.argv[1], encoding='utf-8')).get('sha', '')
@@ -871,7 +871,7 @@ print(sha)
 PY_PRO_COMMIT
 ) || return 1
     curl -fSL --retry 3 --connect-timeout 15 --max-time 90 \
-        "https://raw.githubusercontent.com/ttrroyy/lucx-ui-pro/$script_commit/lucx-ui-latest.sh" -o "$stage/latest-pro.sh" || return 1
+        "https://raw.githubusercontent.com/kostfuciy/lucx-ui-pro/$script_commit/lucx-ui-latest.sh" -o "$stage/latest-pro.sh" || return 1
     installed_revision=$(cat "$PREINSTALL_STATE_DIR/compat-revision" 2>/dev/null || echo 'legacy/unknown')
     echo "Панель VPS: $installed; последний стабильный релиз: $latest; цель (-version): $target"
     echo "Логика Pro VPS: $installed_revision; запущенный скрипт: $PRO_COMPAT_REVISION"
@@ -940,7 +940,7 @@ PY_NO_DOWNGRADE
     fi
     # Freeze backup implementation to the same reviewed Pro commit as the report.
     curl -fSL --retry 3 --connect-timeout 15 --max-time 90 \
-        "https://raw.githubusercontent.com/ttrroyy/lucx-ui-pro/$script_commit/assets/backup/lucx-ui-backup.sh" \
+        "https://raw.githubusercontent.com/kostfuciy/lucx-ui-pro/$script_commit/assets/backup/lucx-ui-backup.sh" \
         -o "$stage/backup.sh" || return 1
     bash -n "$stage/backup.sh" || return 1
     bash "$stage/backup.sh" backup --automatic-update || return 1
