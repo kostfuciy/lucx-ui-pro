@@ -1,4 +1,4 @@
-# lucx-ui-pro-0811
+# lucx-ui-pro-08.11
 ---
 ---
 ## Disclaimer
@@ -38,7 +38,7 @@
 **Скачивание и запуск скрипта**
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ttrroyy/lucx-ui-pro/main/lucx-ui-latest.sh -o /root/lucx-ui-latest.sh && bash /root/lucx-ui-latest.sh -install y
+curl -fsSL https://raw.githubusercontent.com/kostfuciy/lucx-ui-pro/main/lucx-ui-latest.sh -o /root/lucx-ui-latest.sh && bash /root/lucx-ui-latest.sh -install y
 ```
 
 Повторный запуск полностью удаляет прежнюю установку и ставит новую после подтверждения. Клиенты и настройки удаляются; сертификаты сохраняются. Для возврата прежних данных используйте восстановление из backup.
@@ -50,7 +50,7 @@ curl -fsSL https://raw.githubusercontent.com/ttrroyy/lucx-ui-pro/main/lucx-ui-la
 **Скачать свежий скрипт и открыть меню обновления:**
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ttrroyy/lucx-ui-pro/main/lucx-ui-latest.sh -o /root/lucx-ui-latest.sh && bash /root/lucx-ui-latest.sh -update y
+curl -fsSL https://raw.githubusercontent.com/kostfuciy/lucx-ui-pro/main/lucx-ui-latest.sh -o /root/lucx-ui-latest.sh && bash /root/lucx-ui-latest.sh -update y
 ```
 
 По умолчанию выбирается последний стабильный релиз AlexeyLCP/lucx-ui. В меню можно обновить панель вместе с архитектурой, обновить только архитектуру с сохранением версии панели или отменить действие. Уже установленная версия повторно не обновляется; понижение блокируется.
@@ -58,7 +58,7 @@ curl -fsSL https://raw.githubusercontent.com/ttrroyy/lucx-ui-pro/main/lucx-ui-la
 **Обновить до конкретного релиза** (должен быть новее установленного):
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ttrroyy/lucx-ui-pro/main/lucx-ui-latest.sh -o /root/lucx-ui-latest.sh && bash /root/lucx-ui-latest.sh -update y -version v3.9.0-lucx.287
+curl -fsSL https://raw.githubusercontent.com/kostfuciy/lucx-ui-pro/main/lucx-ui-latest.sh -o /root/lucx-ui-latest.sh && bash /root/lucx-ui-latest.sh -update y -version v3.9.0-lucx.287
 ```
 
 Перед изменениями создаётся backup в `/var/backups/x-ui`. Проверяются клиентские связи и настройки нашей схемы; остальные поля, которыми управляет автор панели, могут изменяться при штатной миграции. При обнаруженной ошибке возвращаются сохранённые файлы и БД. Системные пакеты и загруженный модуль ядра файловым откатом не возвращаются. Соединения временно прерываются.
@@ -68,7 +68,7 @@ curl -fsSL https://raw.githubusercontent.com/ttrroyy/lucx-ui-pro/main/lucx-ui-la
 **Полное удаление**
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ttrroyy/lucx-ui-pro/main/lucx-ui-latest.sh -o /root/lucx-ui-latest.sh && bash /root/lucx-ui-latest.sh -uninstall y
+curl -fsSL https://raw.githubusercontent.com/kostfuciy/lucx-ui-pro/main/lucx-ui-latest.sh -o /root/lucx-ui-latest.sh && bash /root/lucx-ui-latest.sh -uninstall y
 ```
 
 ---
@@ -78,7 +78,7 @@ curl -fsSL https://raw.githubusercontent.com/ttrroyy/lucx-ui-pro/main/lucx-ui-la
 Открыть общее меню:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ttrroyy/lucx-ui-pro/main/lucx-ui-latest.sh -o /root/lucx-ui-latest.sh && bash /root/lucx-ui-latest.sh -components y
+curl -fsSL https://raw.githubusercontent.com/kostfuciy/lucx-ui-pro/main/lucx-ui-latest.sh -o /root/lucx-ui-latest.sh && bash /root/lucx-ui-latest.sh -components y
 ```
 
 Выберите **Установить**, **Переустановить** или **Удалить**, затем введите номера нужных компонентов через пробел или запятую. В меню видно, какие компоненты активны, отключены или не установлены. Для уже установленного компонента действие «Установить» использует ту же логику, что и переустановка.
@@ -121,7 +121,7 @@ curl -fsSL https://raw.githubusercontent.com/ttrroyy/lucx-ui-pro/main/lucx-ui-la
 **Установить скрипт бэкапа**
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ttrroyy/lucx-ui-pro/main/assets/backup/lucx-ui-backup.sh -o /usr/local/bin/lucx-ui-backup && chmod +x /usr/local/bin/lucx-ui-backup
+curl -fsSL https://raw.githubusercontent.com/kostfuciy/lucx-ui-pro/main/assets/backup/lucx-ui-backup.sh -o /usr/local/bin/lucx-ui-backup && chmod +x /usr/local/bin/lucx-ui-backup
 ```
 
 Каждая команда ниже скачивает свежую версию скрипта бэкапа; отдельная предварительная установка не требуется.
@@ -129,19 +129,19 @@ curl -fsSL https://raw.githubusercontent.com/ttrroyy/lucx-ui-pro/main/assets/bac
 **Создать бэкап**
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ttrroyy/lucx-ui-pro/main/assets/backup/lucx-ui-backup.sh -o /usr/local/bin/lucx-ui-backup && bash /usr/local/bin/lucx-ui-backup backup
+curl -fsSL https://raw.githubusercontent.com/kostfuciy/lucx-ui-pro/main/assets/backup/lucx-ui-backup.sh -o /usr/local/bin/lucx-ui-backup && bash /usr/local/bin/lucx-ui-backup backup
 ```
 
 **Список бэкапов**
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ttrroyy/lucx-ui-pro/main/assets/backup/lucx-ui-backup.sh -o /usr/local/bin/lucx-ui-backup && bash /usr/local/bin/lucx-ui-backup list
+curl -fsSL https://raw.githubusercontent.com/kostfuciy/lucx-ui-pro/main/assets/backup/lucx-ui-backup.sh -o /usr/local/bin/lucx-ui-backup && bash /usr/local/bin/lucx-ui-backup list
 ```
 
 **Восстановить из бэкапа** (на чистом сервере, пакеты ставятся автоматически)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ttrroyy/lucx-ui-pro/main/assets/backup/lucx-ui-backup.sh -o /usr/local/bin/lucx-ui-backup && bash /usr/local/bin/lucx-ui-backup restore /var/backups/x-ui/lucx-ui-backup-20260101-120000.tar.gz
+curl -fsSL https://raw.githubusercontent.com/kostfuciy/lucx-ui-pro/main/assets/backup/lucx-ui-backup.sh -o /usr/local/bin/lucx-ui-backup && bash /usr/local/bin/lucx-ui-backup restore /var/backups/x-ui/lucx-ui-backup-20260101-120000.tar.gz
 ```
 
 Бэкап включает: конфиги nginx, БД LucX, бинарник панели, SSL, сайт-заглушка, AdGuard Home, systemd, cron, UFW. На время backup панель коротко останавливается.
