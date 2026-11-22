@@ -1,4 +1,10 @@
-# lucx-ui-pro
+# lucx-ui-pro-0811
+---
+---
+## Disclaimer
+#### Это форк скрипта "lucx-ui-pro" от [ttrroxy](https://github.com/ttrroyy). Версия от 8 ноября 2026 года (свежее не нашёл).
+
+---
 
 Автоматическая установка панели [lucx-ui](https://github.com/AlexeyLCP/lucx-ui) с nginx, SSL, автосозданием инбаундов, автогенерацией доменов (только для теста, повышенный риск бана ТСПУ), сайтом заглушкой, self-hosted DoH, fail2ban, защитой от сканеров, настройкой DNS в xray, а также поддержкой Clash/Mihomo подписки.
 
